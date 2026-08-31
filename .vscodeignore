@@ -1,0 +1,16 @@
+.vscode/**
+src/**
+test/**
+media/**
+scripts/**
+docs/**
+node_modules/**
+!node_modules/sql.js
+!node_modules/sql.js/**
+out/**
+tsconfig.json
+esbuild.mjs
+package-lock.json
+.gitignore
+*.vsix
+**/.claude/**

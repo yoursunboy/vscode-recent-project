@@ -1,0 +1,172 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: var(--vscode-foreground);
+  font-family: var(--vscode-font-family);
+  background: transparent;
+}
+
+#toolbar {
+  padding: 8px 8px 4px;
+}
+
+#search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  border: 1px solid var(--vscode-input-border, transparent);
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border-radius: 2px;
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--vscode-focusBorder);
+}
+
+#list {
+  padding: 0 4px;
+}
+
+.empty {
+  padding: 12px 8px;
+  color: var(--vscode-descriptionForeground);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.row:hover {
+  background: var(--vscode-list-hoverBackground);
+}
+
+/* 置顶（收藏）星标：始终显示，置顶时彩色，未置顶时灰 */
+.star {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--vscode-icon-foreground);
+  padding: 0;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row:hover .star {
+  opacity: 1;
+}
+
+.star svg {
+  width: 14px;
+  height: 14px;
+}
+
+.star.pinned {
+  color: #e5a50a; /* 金色：已收藏 */
+  opacity: 1;
+}
+
+.star.pinned:hover {
+  color: #f2c94c;
+}
+
+.star:not(.pinned):hover {
+  color: var(--vscode-list-activeSelectionBackground);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+/* 第一行：文件夹名 | 备注 | 编辑时间
+   名称列 1fr 吸收窗口宽度变化、优先缩略；
+   备注列按内容自适应，紧贴时间列，不留空隙；
+   时间列固定最大宽度 */
+.line1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) 92px;
+  gap: 6px;
+  align-items: center;
+}
+
+.col-name {
+  grid-column: 1;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-note {
+  grid-column: 2;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.col-time {
+  grid-column: 3;
+  width: 92px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--vscode-descriptionForeground);
+  text-align: right;
+}
+
+/* 第二行：完整路径 */
+.line2 {
+  font-size: 11px;
+  color: var(--vscode-descriptionForeground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+}
+
+.row:hover .actions,
+.row.selected .actions {
+  opacity: 1;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  color: var(--vscode-icon-foreground);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.actions button:hover {
+  background: var(--vscode-toolbar-hoverBackground);
+}

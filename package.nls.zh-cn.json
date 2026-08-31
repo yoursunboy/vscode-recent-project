@@ -1,0 +1,10 @@
+{
+  "displayName": "最近项目",
+  "description": "列出最近使用的项目并支持添加备注，点击即可在 VS Code 中打开。",
+  "viewContainer.title": "最近项目",
+  "view.title": "最近项目",
+  "command.refresh": "刷新",
+  "command.openProject": "打开项目",
+  "command.openProjectNewWindow": "在新窗口打开",
+  "note.prompt": "此项目的备注名称（留空则清除）"
+}

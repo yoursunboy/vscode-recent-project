@@ -1,0 +1,10 @@
+{
+  "displayName": "Recent Project",
+  "description": "List recently used projects with notes; click to open in VS Code.",
+  "viewContainer.title": "Recent Projects",
+  "view.title": "Recent Projects",
+  "command.refresh": "Refresh",
+  "command.openProject": "Open Project",
+  "command.openProjectNewWindow": "Open in New Window",
+  "note.prompt": "Note name for this project (leave empty to clear)"
+}

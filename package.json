@@ -1,0 +1,89 @@
+{
+  "name": "recent-project",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.1.1",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "recent",
+    "project",
+    "folder",
+    "history",
+    "workspace"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:recentProject.list"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "recentProject.refresh",
+        "title": "%command.refresh%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "recentProject.openProject",
+        "title": "%command.openProject%"
+      },
+      {
+        "command": "recentProject.openProjectNewWindow",
+        "title": "%command.openProjectNewWindow%"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "recentProject",
+          "title": "%viewContainer.title%",
+          "icon": "$(history)"
+        }
+      ]
+    },
+    "views": {
+      "recentProject": [
+        {
+          "id": "recentProject.list",
+          "name": "%view.title%",
+          "type": "webview"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "recentProject.refresh",
+          "when": "view == recentProject.list",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc --noEmit && node esbuild.mjs",
+    "compile": "tsc --noEmit",
+    "test": "tsc -p tsconfig.json && mocha out/test/**/*.spec.js",
+    "package": "node esbuild.mjs && vsce package --allow-missing-repository"
+  },
+  "dependencies": {
+    "sql.js": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^20.11.0",
+    "@types/sql.js": "^1.4.9",
+    "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^3.2.1",
+    "esbuild": "^0.23.0",
+    "mocha": "^10.7.0",
+    "typescript": "^5.5.0"
+  }
+}
