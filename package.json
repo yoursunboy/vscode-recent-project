@@ -82,7 +82,7 @@
     "@types/sql.js": "^1.4.9",
     "@types/vscode": "^1.95.0",
     "@vscode/vsce": "^3.2.1",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.28.2",
     "mocha": "^10.7.0",
     "typescript": "^5.5.0"
   }
