@@ -70,7 +70,7 @@
   "scripts": {
     "build": "tsc --noEmit && node esbuild.mjs",
     "compile": "tsc --noEmit",
-    "test": "tsc -p tsconfig.json && mocha out/test/**/*.spec.js",
+    "test": "tsc -p tsconfig.json && mocha \"out/test/**/*.spec.js\"",
     "package": "node esbuild.mjs && vsce package --allow-missing-repository"
   },
   "dependencies": {
