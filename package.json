@@ -5,6 +5,10 @@
   "version": "0.1.1",
   "publisher": "local",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoursunboy/vscode-recent-project.git"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },

@@ -2,8 +2,6 @@
 
 > 在 VS Code 侧边栏常驻展示最近打开的项目，支持备注、置顶、一键打开，无需重复维护历史数据——直接读取 VS Code 自身的最近历史。
 
-<!-- TODO: 有截图后替换为 `![sidebar](docs/screenshots/sidebar.png)` -->
-
 ## ✨ 功能特性
 
 - **读取原生历史**：从 VS Code 自身的存储（`state.vscdb` / `storage.json`）读取最近项目，兼容 Code / Insiders / VSCodium / Cursor，跨 Windows / macOS / Linux
