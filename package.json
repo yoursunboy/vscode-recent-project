@@ -82,7 +82,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.9",
-    "@types/node": "^20.11.0",
+    "@types/node": "^26.5.1",
     "@types/sql.js": "^1.4.9",
     "@types/vscode": "^1.95.0",
     "@vscode/vsce": "^3.2.1",
